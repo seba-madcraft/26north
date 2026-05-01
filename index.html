@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26 North Yachts - Paid Media Pivot Plan</title>
+    <style>
+        :root {
+            --primary-navy: #002D56;
+            --secondary-blue: #00509E;
+            --accent-gold: #C2A649;
+            --light-gray: #F4F6F9;
+            --text-dark: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-navy);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-axis: 100;
+        }
+        .nav-tabs button {
+            background-color: inherit;
+            color: var(--primary-navy);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 18px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+        .nav-tabs button:hover {
+            background-color: var(--light-gray);
+        }
+        .nav-tabs button.active {
+            border-bottom: 4px solid var(--accent-gold);
+            color: var(--secondary-blue);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            animation: fadeIn 0.5s;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h2 {
+            color: var(--primary-navy);
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--secondary-blue);
+            margin-top: 30px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 12px;
+        }
+        .highlight-box {
+            background-color: rgba(194, 166, 73, 0.1);
+            border-left: 4px solid var(--accent-gold);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>26 North Yachts</h1>
+        <p>Strategic Paid Media Pivot Plan (Google & Meta)</p>
+    </header>
+
+    <div class="nav-tabs">
+        <button class="tab-link active" onclick="openTab(event, 'arch')">1. Data Architecture</button>
+        <button class="tab-link" onclick="openTab(event, 'demand')">2. Demand Gen & LALs</button>
+        <button class="tab-link" onclick="openTab(event, 'consolidation')">3. Funnel Consolidation</button>
+    </div>
+
+    <div class="container">
+        <div id="arch" class="tab-content active">
+            <h2>Phase 1: The "Signal-to-Scale" Framework</h2>
+            <p><strong>Objective:</strong> Rebuild the tracking infrastructure to stop data loss and enable Offline Conversion Tracking (OCT) via API.</p>
+            
+            <div class="highlight-box">
+                <strong>The Core Issue:</strong> Current lead forms are not native to Zoho, requiring fragile third-party webhooks (Make.com) that strip critical marketing data before it reaches the CRM.
+            </div>
+
+            <h3>Execution Steps:</h3>
+            <ul>
+                <li><strong>Form Standardization:</strong> Simplify the form architecture. Migrate to native Zoho forms (or direct API integrations) embedded on the site to ensure seamless data flow.</li>
+                <li><strong>GCLID Capture:</strong> Create hidden fields in the new forms to capture and pass the <code>GCLID</code> (Google Click ID) and Meta Click IDs directly into Zoho pipeline records.</li>
+                <li><strong>API Value Sync:</strong> Configure the Zoho-to-Google API to fire conversion events back to Google Ads <em>only</em> when a lead status changes to "Responsive" or "Qualified", training the algorithm on actual business value rather than raw form submissions.</li>
+            </ul>
+        </div>
+
+        <div id="demand" class="tab-content">
+            <h2>Phase 2: The "Broker Proxy" Demand Gen Strategy</h2>
+            <p><strong>Objective:</strong> Overcome the "broker-to-broker" limitation and attack top-tier market share on the East Coast.</p>
+
+            <div class="highlight-box">
+                <strong>The Opportunity:</strong> Market giants like Burgess and Denison dominate Search Volume (5,400 and 1,600 SV respectively). By reallocating the $1,400 monthly Bing budget directly into Google Demand Gen, we can bypass the saturated Search auction and build luxury brand authority visually.
+            </div>
+
+            <h3>Execution Steps:</h3>
+            <ul>
+                <li><strong>Budget Reallocation:</strong> Pause the underperforming Bing Ads account entirely. Shift the $1,400/month budget to Google Demand Gen campaigns.</li>
+                <li><strong>Seed Audience Refinement (1st Party Data):</strong> Since "Closed Sales" lack the volume needed for machine learning, we will extract a 1st party data list of <strong>"Responsive Leads"</strong> from Zoho. This bypasses the "ghosting" issue and trains the algorithm to find users who actively engage[cite: 805, 899].</li>
+                <li><strong>Lookalike (LAL) Deployment:</strong> Use this high-quality seed list to generate LALs for Demand Gen, targeting the East Coast market with high-end, lifestyle-focused video and image assets[cite: 2631, 2646].</li>
+            </ul>
+        </div>
+
+        <div id="consolidation" class="tab-content">
+            <h2>Phase 3: Full-Funnel Consolidation & Hygiene</h2>
+            <p><strong>Objective:</strong> Maximize efficiency by eliminating budget constraints and protecting the sales team from "junk" leads.</p>
+
+            <div class="highlight-box">
+                <strong>The Defense Strategy:</strong> Historical data shows a severe issue with bots, "syndicated search", and unqualified leads draining sales resources[cite: 192, 850]. We must harden the funnel before scaling budget.
+            </div>
+
+            <h3>Execution Steps:</h3>
+            <ul>
+                <li><strong>Remove "Limited by Budget" Constraints:</strong> With Bing paused and form tracking fixed, consolidate Google Search campaigns. Implement Portfolio Bidding (Maximize Conversions) targeting only the refined, high-intent keywords.</li>
+                <li><strong>Lead Form Friction (Meta):</strong> Implement 2FA (Phone Number Verification) on Meta Instant Forms. This adds necessary friction to filter out accidental clicks and bots, ensuring the sales team only receives high-intent inquiries.</li>
+                <li><strong>Continuous Negative Keyword Expansion:</strong> Maintain aggressive negative keyword sweeps to exclude non-commercial traffic (e.g., "cheap", "jobs", "salary", "how to") from triggering the new AI-driven Search Max campaigns.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all buttons
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            setTimeout(() => { document.getElementById(tabName).classList.add("active"); }, 10);
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
